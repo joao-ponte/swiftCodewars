@@ -10,9 +10,10 @@ reverse("HELLO")
 
 
 func reverse1(_ str: String) -> String {
-    var reversed = ""
-    for char in str {
+    var reversed: String = ""
+    for char: Character in str {
         reversed = String(char) + reversed
     }
     return reversed
 }
+
