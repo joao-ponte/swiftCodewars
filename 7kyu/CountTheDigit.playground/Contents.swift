@@ -7,19 +7,19 @@ import UIKit
 //Implement the function taking n and d as parameters and returning this count.
 
 
-//func nbDig(_ n: Int, _ d: Int) -> Int {
-//    var sqrNumbers = [Int]
-//    for i in 0...n {
-//        var sqr = i * i
-//        sqrNumbers.append(sqr)
-//        print(sqrNumbers)
-//    }
-//    return 1
-//}
-
-var sqrNumbers: [Int] = []
-for i in 0...10 {
-    var sqr = i * i
-    sqrNumbers.append(sqr)
-    print(sqrNumbers)
+func nbDig(_ n: Int, _ d: Int) -> Int {
+    var sqrNumbers: String = ""
+    for i in 0...n {
+        var sqr = i * i
+        sqrNumbers.append(String(sqr))
+    }
+    return sqrNumbers.filter { String($0) == "\(d)" }.count
 }
+
+
+
+nbDig(25, 1)
+
+
+
+
